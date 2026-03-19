@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1208;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Georgia', serif;
+  color: #f0d98c;
+}
+
+#ui-overlay {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#game-title {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: #f0d98c;
+  text-shadow: 0 0 12px rgba(240, 200, 80, 0.5);
+}
+
+#subtitle {
+  font-size: 0.85rem;
+  color: #c8a96e;
+  letter-spacing: 2px;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+#canvas-wrapper {
+  border: 3px solid #8b6914;
+  box-shadow:
+    0 0 0 1px #1a1208,
+    0 0 30px rgba(200, 150, 50, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.4);
+  image-rendering: pixelated;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated;
+}
+
+#controls-hint {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #8b6914;
+  letter-spacing: 1px;
+}
