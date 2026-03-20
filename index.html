@@ -1,20 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Last Days — A Biblical RPG</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Way — A Biblical RPG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div id="ui-overlay">
-    <h1 id="game-title">✝ The Last Days</h1>
-    <p id="subtitle">Jerusalem, 33 AD</p>
+
+<div id="shell">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header id="header">
+    <div class="title-block">
+      <span class="cross">✝</span>
+      <span class="game-title">The Way</span>
+      <span class="game-sub">Jerusalem, 33 AD</span>
+    </div>
+    <div class="stage-dots-wrap">
+      <span class="dots-label">ACT</span>
+      <div class="stage-dots" id="stage-dots"></div>
+    </div>
+  </header>
+
+  <!-- ═══════════ MAIN ═══════════ -->
+  <div id="main">
+
+    <div id="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <aside id="sidebar">
+
+      <div id="stage-card">
+        <div class="stage-num"  id="ui-stage-num">Stage 1 of 8</div>
+        <div class="stage-name" id="ui-stage-name">Jerusalem Gate</div>
+        <div class="stage-date" id="ui-stage-date">Palm Sunday — The Triumphal Entry</div>
+        <div class="progress-track">
+          <div class="progress-fill" id="ui-progress"></div>
+        </div>
+      </div>
+
+      <section class="panel" id="objectives-panel">
+        <div class="panel-title">Objectives</div>
+        <ul class="obj-list" id="ui-objectives"></ul>
+      </section>
+
+      <section class="panel" id="backpack-panel">
+        <div class="panel-title">Backpack</div>
+        <div class="inv-grid" id="ui-inventory"></div>
+      </section>
+
+      <section class="panel" id="moment-panel">
+        <div class="panel-title">Key Moment</div>
+        <div class="moment-card">
+          <div class="moment-icon" id="ui-moment-icon">🏛️</div>
+          <div class="moment-name" id="ui-moment-name">The Triumphal Entry</div>
+          <div class="moment-hint" id="ui-moment-hint">Complete all objectives</div>
+        </div>
+      </section>
+
+    </aside>
   </div>
-  <div id="canvas-wrapper">
-    <canvas id="gameCanvas"></canvas>
-  </div>
-  <div id="controls-hint">Arrow Keys to Move</div>
-  <script src="game.js"></script>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer id="footer">
+    <div class="hint"><kbd>↑↓←→</kbd>Move</div>
+    <div class="hint-div"></div>
+    <div class="hint"><kbd>E</kbd>Interact</div>
+    <div class="hint-div"></div>
+    <div class="hint"><kbd>Esc</kbd>Menu</div>
+  </footer>
+
+</div>
+
+<script src="sprites.js"></script>
+<script src="game.js"></script>
 </body>
 </html>
