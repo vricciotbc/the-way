@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Way</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="game-wrapper">
+    <h1 id="game-title">✝ The Way</h1>
+
+    <!-- The game renders here -->
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud">
+      <span id="map-name">...</span>
+    </div>
+
+    <p id="controls-hint">Arrow Keys or WASD to move</p>
+  </div>
+
+  <!--
+    Scripts must load in this order:
+    1. Data files (define the raw content)
+    2. Engine files (use that content)
+    3. game.js last (kicks everything off)
+  -->
+  <script src="data/tiles.js"></script>
+  <script src="data/maps.js"></script>
+  <script src="engine/map.js"></script>
+  <script src="engine/player.js"></script>
+  <script src="engine/game.js"></script>
+</body>
+</html>
