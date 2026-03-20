@@ -39,7 +39,6 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('keyup', (e) => {
   keys[e.key] = false;
-  Player.isMoving = false;   // allow the next step once the key is released
 });
 
 
